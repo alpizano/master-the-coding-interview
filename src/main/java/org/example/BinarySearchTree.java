@@ -4,6 +4,10 @@ class BinarySearchTree {
     Node node;
 
     public void insert(int value) {
+        insert(node, value);
+    }
+
+    public void insert(Node node, int value) {
         // Create new Node
         Node newNode = new Node(value);
 
@@ -13,13 +17,12 @@ class BinarySearchTree {
         }
         // Case 2: Value < node.value
         else if(value < node.value) {
-            insert(value);
+            insert(node.left, value);
         }
         // Case 3: Value > node.value
         else {
-            insert(value);
+            insert(node.right, value);
         }
-
     }
 }
 
