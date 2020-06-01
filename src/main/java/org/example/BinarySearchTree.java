@@ -26,6 +26,8 @@ class BinarySearchTree {
         }
         return node;
     }
+
+
 }
 
 class Node {
@@ -38,4 +40,28 @@ class Node {
         this.left = null;
         this.right = null;
     }
+
+    public void preorderPrint() {
+        System.out.println(value);
+        if(left != null) {
+            left.preorderPrint();
+        }
+        if(right != null) {
+            right.preorderPrint();
+        }
+    }
+
+    public static void main(String[] args) {
+        BinarySearchTree bst = new BinarySearchTree();
+        bst.insert(9);
+        bst.insert(4);
+        bst.insert(20);
+        bst.insert(1);
+        bst.insert(6);
+        bst.insert(15);
+        bst.insert(170);
+
+       //bst.root.preorderPrint();
+    }
+
 }

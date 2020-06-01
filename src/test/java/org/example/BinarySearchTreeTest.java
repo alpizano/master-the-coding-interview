@@ -34,5 +34,7 @@ public class BinarySearchTreeTest
         bst.insert(6);
         bst.insert(15);
         bst.insert(170);
+
+        bst.root.preorderPrint();
     }
 }
